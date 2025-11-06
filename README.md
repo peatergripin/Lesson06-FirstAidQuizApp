@@ -1,7 +1,7 @@
-# 🌙 C346 Week03 Lesson06
+# 🌙 C346 Week03 Lesson06 (First Aid Quiz App)
 
 [![Module](https://img.shields.io/badge/Module-C346%20Mobile%20App%20Development-6A5ACD?logo=android&logoColor=white)](#)
-[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-2E8B57.svg)](#)
+[![Platform](https://img.shields.io/badge/Platform-Android-2E8B57?logo=android&logoColor=white)](#)
 [![Language](https://img.shields.io/badge/Language-JavaScript%20%7C%20React%20Native-61DAFB?logo=react&logoColor=white)](#)
 [![Status](https://img.shields.io/badge/Status-Completed-success)](#)
 
