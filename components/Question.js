@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
-import RNPickerSelect from "react-native-picker-select";
+import { Picker } from "@react-native-picker/picker";
 import { Audio, Video } from "expo-av";
 
 export default function Question({
@@ -55,7 +55,7 @@ export default function Question({
         />
       )}
 
-      <RNPickerSelect
+      {/* <RNPickerSelect
         value={userAns}
         onValueChange={handleValueChange}
         items={[
@@ -64,7 +64,14 @@ export default function Question({
             value: opt,
           })),
         ]}
-      />
+      /> */}
+      <View style={styles.pickerContainer}>
+        <Picker value={userAns} onValueChange={handleValueChange}>
+          {question.options.map((element) => (
+            <Picker.Item label={element} value={element} />
+          ))}
+        </Picker>
+      </View>
     </View>
   );
 }
@@ -76,6 +83,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ddd",
     borderRadius: 10,
+    backgroundColor: "#fff",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    elevation: 3,
   },
   questionText: {
     fontWeight: "bold",
@@ -104,5 +117,10 @@ const styles = StyleSheet.create({
   audioButtonText: {
     color: "#fff",
     fontWeight: "bold",
+  },
+  pickerContainer: {
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 5,
   },
 });
