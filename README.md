@@ -1,4 +1,4 @@
-# 🌙 C346 Tutorial — _[Your Tutorial Title]_
+# 🌙 C346 Week03 Lesson06
 
 [![Module](https://img.shields.io/badge/Module-C346%20Mobile%20App%20Development-6A5ACD?logo=android&logoColor=white)](#)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-2E8B57.svg)](#)
@@ -9,7 +9,7 @@
 
 ## 📝 Overview
 
-A brief summary of this tutorial — what was built, what concepts were covered, and key learning points.
+Lessons 5 & 6 taught us on several Components that can be used in react native such as TextInput, Button, TouchableOpacity, Picker (with npm install), Alert and Toast Android. Additionally, we learned on how to use states in our apps.
 
 > ✨ _Example:_ Implemented a scrollable FlatList and explored reusable components in React Native.
 
@@ -20,8 +20,8 @@ A brief summary of this tutorial — what was built, what concepts were covered,
 ![App Demo](./media/demo.gif)
 
 <p align="center">
-  <img src="./media/screenshot1.png" width="180" alt="Screenshot1" />
-  <img src="./media/screenshot2.png" width="180" alt="Screenshot2" />
+  <img src="./assets/img/screenshot1.png" width="180" alt="Screenshot1" />
+  <img src="./assets/img/screenshot2.png" width="180" alt="Screenshot2" />
 </p>
 
 ---
@@ -29,10 +29,8 @@ A brief summary of this tutorial — what was built, what concepts were covered,
 ## 🚀 Features
 
 - ✅ Reusable components
-- ✅ Props for dynamic content
-- ✅ FlatList for efficient rendering
-- ✅ Flexbox layout
-- ✅ Clean and responsive UI
+- ✅ Use of states
+- ✅ Varied kinds of media output
 
 ---
 
@@ -40,22 +38,20 @@ A brief summary of this tutorial — what was built, what concepts were covered,
 
 | Concept        | Description                     |
 | :------------- | :------------------------------ |
-| **Components** | Modular UI blocks for reuse     |
+| **Components** | Picker                          |
 | **Props**      | Passing data between components |
-| **FlatList**   | Optimized scrolling list        |
-| **Flexbox**    | Responsive layout structure     |
+| **State**      | State to capture user answer    |
 
 ---
 
 ## 🧱 Code Snippet
 
 ```jsx
-export default function IslandCard({ name, image }) {
-  return (
-    <View style={styles.card}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.title}>{name}</Text>
-    </View>
-  );
-}
+<View style={styles.pickerContainer}>
+  <Picker value={userAns} onValueChange={handleValueChange}>
+    {question.options.map((element) => (
+      <Picker.Item label={element} value={element} />
+    ))}
+  </Picker>
+</View>
 ```
