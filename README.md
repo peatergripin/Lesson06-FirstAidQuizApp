@@ -11,7 +11,7 @@
 
 Lessons 5 & 6 taught us on several Components that can be used in react native such as TextInput, Button, TouchableOpacity, Picker (with npm install), Alert and Toast Android. Additionally, we learned on how to use states in our apps.
 
-> ✨ _Example:_ Implemented a scrollable FlatList and explored reusable components in React Native.
+> ✨ _Example:_ Implemented a state to capture user answers in React Native.
 
 ---
 
